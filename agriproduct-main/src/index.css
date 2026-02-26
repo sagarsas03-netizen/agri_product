@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 40 20% 97%;
+    --foreground: 140 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 140 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 25% 12%;
+
+    --primary: 142 45% 28%;
+    --primary-foreground: 40 20% 97%;
+
+    --secondary: 40 50% 92%;
+    --secondary-foreground: 140 25% 12%;
+
+    --muted: 40 15% 93%;
+    --muted-foreground: 140 10% 45%;
+
+    --accent: 42 90% 55%;
+    --accent-foreground: 140 25% 12%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 40 15% 88%;
+    --input: 40 15% 88%;
+    --ring: 142 45% 28%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 142 30% 18%;
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 42 90% 55%;
+    --sidebar-primary-foreground: 140 25% 12%;
+    --sidebar-accent: 142 25% 24%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 142 20% 25%;
+    --sidebar-ring: 42 90% 55%;
+
+    --success: 142 60% 40%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  .dark {
+    --background: 140 20% 8%;
+    --foreground: 40 20% 92%;
+    --card: 140 20% 11%;
+    --card-foreground: 40 20% 92%;
+    --popover: 140 20% 11%;
+    --popover-foreground: 40 20% 92%;
+    --primary: 142 50% 45%;
+    --primary-foreground: 140 25% 8%;
+    --secondary: 140 15% 18%;
+    --secondary-foreground: 40 20% 92%;
+    --muted: 140 15% 18%;
+    --muted-foreground: 40 10% 60%;
+    --accent: 42 90% 55%;
+    --accent-foreground: 140 25% 8%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 140 15% 20%;
+    --input: 140 15% 20%;
+    --ring: 142 50% 45%;
+    --sidebar-background: 140 20% 6%;
+    --sidebar-foreground: 40 20% 92%;
+    --sidebar-primary: 42 90% 55%;
+    --sidebar-primary-foreground: 140 25% 8%;
+    --sidebar-accent: 140 15% 12%;
+    --sidebar-accent-foreground: 40 20% 92%;
+    --sidebar-border: 140 15% 15%;
+    --sidebar-ring: 42 90% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+}
